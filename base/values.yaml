@@ -1,5 +1,5 @@
 app:
-  name: K8sTest
+  name: k8stest
   port: 8080
 deployment:
   repository: rinzlerflynn115/k8stest
