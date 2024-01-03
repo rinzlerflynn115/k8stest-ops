@@ -1,0 +1,3 @@
+base:
+  deployment:
+    imageTag: 0.0.2

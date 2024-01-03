@@ -1,0 +1,10 @@
+app:
+  name: K8sTest
+  port: 8080
+deployment:
+  repository: rinzlerflynn115/k8stest
+  imageTag: 0.0.2
+  replicas: 5
+service:
+  port: 80
+  nodePort: 32123

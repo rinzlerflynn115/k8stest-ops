@@ -1,0 +1,9 @@
+apiVersion: v2
+name: K8sTest
+description: Kubernetes Test App
+version: 0.0.1
+appVersion: 0.0.1
+dependencies:
+  - version: 0.0.1
+    repository: "file://../../base"
+    name: base

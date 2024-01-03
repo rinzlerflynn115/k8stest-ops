@@ -1,0 +1,23 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app.name }}
+  labels:
+    app: {{ .Values.app.name }}
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.app.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app.name }}
+  spec:
+    terminationGracePeriodSeconds: 1
+    containers:
+      - name: application
+        image: {{ .Values.deployment.repository }}:{{ .Values.deployment.imageTag }}
+        imagePullPolicy: Always
+        ports:
+          - containerPort: {{ .Values.app.port }}
