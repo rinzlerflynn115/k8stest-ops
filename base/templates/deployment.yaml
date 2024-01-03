@@ -13,11 +13,11 @@ spec:
     metadata:
       labels:
         app: {{ .Values.app.name }}
-  spec:
-    terminationGracePeriodSeconds: 1
-    containers:
-      - name: application
-        image: {{ .Values.deployment.repository }}:{{ .Values.deployment.imageTag }}
-        imagePullPolicy: Always
-        ports:
-          - containerPort: {{ .Values.app.port }}
+    spec:
+      terminationGracePeriodSeconds: 1
+      containers:
+        - name: application
+          image: {{ .Values.deployment.repository }}:{{ .Values.deployment.imageTag }}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: {{ .Values.app.port }}
